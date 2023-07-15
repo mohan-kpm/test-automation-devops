@@ -2,7 +2,6 @@ package com.selenium.script;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,11 +26,8 @@ public class App
         
         driver.findElement(By.id("email")).sendKeys("abc@def.com");
         driver.findElement(By.id("pass")).sendKeys("dummypassword");
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.findElement(By.className("_9lsa")).click();
-        //driver.findElement(By.name("login")).click();
-
-
-
+        driver.findElement(By.name("login")).click();
     }
 }
