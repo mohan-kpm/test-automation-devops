@@ -43,6 +43,7 @@ public class App
         File destFile = new File("screenshot.png");
         FileUtils.copyFile(screenShot,destFile);
         System.out.println("Screenshot copied to : " + destFile.getAbsolutePath().toString());
+        driver.quit();
 
     }
 }
